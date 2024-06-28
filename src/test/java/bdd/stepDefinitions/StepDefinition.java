@@ -3,7 +3,7 @@ package bdd.stepDefinitions;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,9 +20,9 @@ public class StepDefinition extends Utils{
     Response response;
     TestDataBuild testDataBuild = new TestDataBuild();
 
-    @Given("Add Place Payload")
-    public void addPlacePayload() throws FileNotFoundException {
-        request = given().spec(requestSpecification()).body(testDataBuild.addPlacePayload());
+    @Given("add Place Payload {string} {string} {string}")
+    public void addPlacePayload(String name, String language, String address) throws IOException {
+        request = given().spec(requestSpecification()).body(testDataBuild.addPlacePayload(name, language, address));
     }
 
     @When("user calls {string} using Post http request")

@@ -8,17 +8,17 @@ import bdd.pojo.googlemaps.Location;
 
 public class TestDataBuild {
 
-    public AddPlace addPlacePayload() {
+    public AddPlace addPlacePayload(String name, String language, String address) {
 
         // Build an Object with POJO approach
         AddPlace addPlace = new AddPlace();
 
         addPlace.setAccuracy(50);
-        addPlace.setAddress("29, side layout, cohen 09");
-        addPlace.setLanguage("French-IN");
+        addPlace.setAddress(address);
+        addPlace.setLanguage(language);
         addPlace.setWebsite("http://google.com");
         addPlace.setPhone_number("(+91) 983 893 3937");
-        addPlace.setName("Frontline house");
+        addPlace.setName(name);
 
         List<String> myList = new ArrayList<>();
         myList.add("shoe park");
