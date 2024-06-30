@@ -1,4 +1,4 @@
-package bdd.pojo.googlemaps;
+package bdd.pojo.maps;
 
 import java.util.List;
 

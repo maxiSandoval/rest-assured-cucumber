@@ -1,4 +1,4 @@
-package bdd.resources;
+package bdd.apis;
 
 /**
  * 
@@ -8,7 +8,7 @@ package bdd.resources;
  * provides type-safety
  * 
  */
-public enum APIResources {
+public enum APIMapsResources {
 
     ADD_PLACE_API("maps/api/place/add/json"),
     GET_PLACE_API("maps/api/place/get/json"),
@@ -16,7 +16,7 @@ public enum APIResources {
 
     private String resource;
 
-    APIResources(String resource) {
+    APIMapsResources(String resource) {
         this.resource = resource;
     }
 

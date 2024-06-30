@@ -1,10 +1,10 @@
-package bdd.resources;
+package bdd.resources.data;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import bdd.pojo.googlemaps.AddPlace;
-import bdd.pojo.googlemaps.Location;
+import bdd.pojo.maps.AddPlace;
+import bdd.pojo.maps.Location;
 
 public class TestDataBuild {
 

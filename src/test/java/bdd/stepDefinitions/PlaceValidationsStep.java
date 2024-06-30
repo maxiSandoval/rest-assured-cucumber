@@ -10,11 +10,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import bdd.resources.APIResources;
-import bdd.resources.TestDataBuild;
-import bdd.resources.Utils;
+import bdd.apis.APIMapsResources;
+import bdd.resources.data.TestDataBuild;
+import bdd.resources.utils.Utils;
 
-public class StepDefinition extends Utils {
+public class PlaceValidationsStep extends Utils {
 
     RequestSpecification request;
     Response response;
@@ -32,7 +32,7 @@ public class StepDefinition extends Utils {
     public void userCallsUsingHttpRequest(String resource, String method) {
 
         // Constructor will be called with the value of resoruce which is pass
-        APIResources resourceAPI = APIResources.valueOf(resource);
+        APIMapsResources resourceAPI = APIMapsResources.valueOf(resource);
 
         if (method.equalsIgnoreCase("POST")) {
             response = request.when().log().all()

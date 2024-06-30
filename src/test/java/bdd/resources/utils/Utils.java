@@ -1,4 +1,4 @@
-package bdd.resources;
+package bdd.resources.utils;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -59,7 +59,7 @@ public class Utils {
         Properties prop = new Properties();
         // Here we are reading the file
         FileInputStream fis = new FileInputStream(
-                "C:\\Source\\rest-assured\\rest-assured-cucumber\\rest-assured-cucumber\\src\\test\\java\\bdd\\resources\\global.properties");
+                System.getProperty("user.dir") + "\\src\\test\\java\\bdd\\resources\\properties\\global.properties");
         // load the file information in Properties variable
         prop.load(fis);
         return prop.getProperty(key);
