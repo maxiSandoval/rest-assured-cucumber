@@ -11,6 +11,8 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
@@ -18,6 +20,7 @@ public class Utils {
     
     // This kind of variable is share across the execution
     public static RequestSpecification requestSpec;
+    
     ResponseSpecification responseSpec;
 
     // Create a general Request type
@@ -60,5 +63,11 @@ public class Utils {
         // load the file information in Properties variable
         prop.load(fis);
         return prop.getProperty(key);
+    }
+
+    public String getJsPathAsString(Response response, String key){
+        String responseString = response.asString();
+        JsonPath jsPath = new JsonPath(responseString);
+        return jsPath.get(key).toString();
     }
 }
