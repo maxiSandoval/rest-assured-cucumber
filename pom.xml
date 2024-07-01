@@ -7,24 +7,33 @@
   <groupId>bdd</groupId>
   <artifactId>rest-assured-cucumber</artifactId>
   <version>1.0-SNAPSHOT</version>
-
   <name>rest-assured-cucumber</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>22</maven.compiler.source>
     <maven.compiler.target>22</maven.compiler.target>
+
+    <!-- dependencies version -->
+    <rest-assured.version>5.4.0</rest-assured.version>
+    <cucumber.version>7.18.0</cucumber.version>
+    <junit.version>4.13.2</junit.version>
+    <jackson-databind.version>2.17.1</jackson-databind.version>
+
+    <!-- plugins version -->
+    <maven-surefire.version>3.3.0</maven-surefire.version>
+    <maven-cucumber-reporting.version>5.8.1</maven-cucumber-reporting.version>
+
+
   </properties>
 
   <dependencies>
-    
-   <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+
+    <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
-      <version>5.4.0</version>
+      <version>${rest-assured.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -32,14 +41,14 @@
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>7.18.0</version>
+      <version>${cucumber.version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-junit</artifactId>
-      <version>7.18.0</version>
+      <version>${cucumber.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -47,14 +56,14 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.17.1</version>
+      <version>${jackson-databind.version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.13.2</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -64,7 +73,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>${maven-surefire.version}</version>
         <configuration>
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
@@ -72,7 +81,7 @@
       <plugin>
         <groupId>net.masterthought</groupId>
         <artifactId>maven-cucumber-reporting</artifactId>
-        <version>5.8.1</version>
+        <version>${maven-cucumber-reporting.version}</version>
         <executions>
           <execution>
             <id>execution</id>

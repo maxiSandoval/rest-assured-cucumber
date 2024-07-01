@@ -11,7 +11,6 @@ Feature: Validating Place API's
 
     Examples:
       | name  | language | address   |
-      #      | maxi  | English  | Huaso campesino |
       | fenix | English  | Parcela 3 |
 
   @DeletePlace
