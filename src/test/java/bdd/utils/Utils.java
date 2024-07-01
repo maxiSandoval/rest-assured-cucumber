@@ -1,5 +1,6 @@
-package bdd.resources.utils;
+package bdd.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class Utils {
         if (requestSpec == null) {
             // This PrintStream allow us to write in .txt file
             // content is put into the file
-            PrintStream log = new PrintStream(new FileOutputStream("logging.txt"));
+            PrintStream log = new PrintStream(new FileOutputStream(getGlobalValue("logPath") + "logging.txt"));
             requestSpec = new RequestSpecBuilder()
                     .setBaseUri(getGlobalValue("baseUrl"))
                     .addQueryParam("key", "qaclick123")
@@ -59,7 +60,7 @@ public class Utils {
         Properties prop = new Properties();
         // Here we are reading the file
         FileInputStream fis = new FileInputStream(
-                System.getProperty("user.dir") + "\\src\\test\\java\\bdd\\resources\\properties\\global.properties");
+                System.getProperty("user.dir") + "\\src\\properties\\global.properties");
         // load the file information in Properties variable
         prop.load(fis);
         return prop.getProperty(key);

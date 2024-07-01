@@ -1,4 +1,4 @@
-package bdd.resources.data;
+package bdd.utils.data;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,8 @@ public class TestDataBuild {
         // Build an Object with POJO approach
         AddPlace addPlace = new AddPlace();
 
+        // In this case we consider just a few parameter as a required
+        // this give us a clue for some other scenarios
         addPlace.setAccuracy(50);
         addPlace.setAddress(address);
         addPlace.setLanguage(language);

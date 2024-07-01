@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/java/bdd/features", glue = "bdd.stepDefinitions",
+@CucumberOptions(features = "src/test/resources/features", glue = "bdd.stepDefinition",
         // tags = "@DeletePlace"
         plugin = "json:target/jsonReports/cucumber-report.json" // Related to inputDirectory of plugin
                                                                 // maven-surefire-plugin

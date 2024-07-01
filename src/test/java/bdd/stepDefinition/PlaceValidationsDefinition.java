@@ -1,4 +1,4 @@
-package bdd.stepDefinitions;
+package bdd.stepDefinition;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
@@ -11,10 +11,10 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import bdd.apis.APIMapsResources;
-import bdd.resources.data.TestDataBuild;
-import bdd.resources.utils.Utils;
+import bdd.utils.Utils;
+import bdd.utils.data.TestDataBuild;
 
-public class PlaceValidationsStep extends Utils {
+public class PlaceValidationsDefinition extends Utils {
 
     RequestSpecification request;
     Response response;
