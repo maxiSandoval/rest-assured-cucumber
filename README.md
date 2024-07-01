@@ -1,4 +1,4 @@
-# RestAssured Project
+# RestAssured and Cucumber Project
 
 This is a template of RestAssured and Cucumber project in Java using Maven. 
 This project is based on a course from Udemy https://www.udemy.com/course/rest-api-automation-testing-rest-assured/ but adapted in accordance with my considerations.
