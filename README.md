@@ -1,7 +1,6 @@
 # Rest Assured and Cucumber Project
 
 This is a template of Rest Assured and Cucumber using Java in Maven project. 
-This project is based on a course from Udemy https://www.udemy.com/course/rest-api-automation-testing-rest-assured/ but adapted in accordance with my considerations.
 
 ## Getting Started
 
