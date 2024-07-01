@@ -1,13 +1,13 @@
-# RestAssured and Cucumber Project
+# Rest Assured and Cucumber Project
 
-This is a template of RestAssured and Cucumber project in Java using Maven. 
+This is a template of Rest Assured and Cucumber using Java in Maven project. 
 This project is based on a course from Udemy https://www.udemy.com/course/rest-api-automation-testing-rest-assured/ but adapted in accordance with my considerations.
 
 ## Getting Started
 
-Consider the following instructions to started with the project
+In the following instructions you can start with this project
 
-### Prerequisites
+## Prerequisites
 
 To run this project, you'll need:
 
@@ -15,7 +15,7 @@ To run this project, you'll need:
 - Maven 3.6 or higher
 - An IDE (e.g. IntelliJ IDEA, Eclipse)
 
-### Installing
+## Installing
 
 To install this project, follow these steps:
 
@@ -33,7 +33,7 @@ To run the tests, you can use the following command in your terminal:
 
 This will run the test classes and output the results in the console.
 
-## Genereting report
+## Generating report
 
 To run generate a test report from your execution, you can use the following command in your terminal:
 
